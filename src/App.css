@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+.foodContent {
+    background-color: black; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.foodContainer {
+    display: flex; 
+    flex-direction: row;
+    margin: 0 auto; 
+    max-width: 1160px; 
+    padding: 0 25px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.foodDisplay {
+    background-color: #d3e3b6; 
+    height: 100vh; 
+}
+
+.foodFormButton {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px; 
+    width: 100px; 
+}
+
+.foodFormInput {
+    display: block;
+    height:30px; 
+    margin-top: 0px; 
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+.foodImage {
+    background-size: 30vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: saturate(0); 
+    height: 200px; 
+}
+
+.foodImage:hover {
+    filter: saturate(1); 
+}
+
+.foodTitle {
+    font-family: "Copperplate"; 
+    text-align:center; 
+    padding-top: 75px; 
+}
+
+.foodTitle a{
+    color: white; 
+    font-family: "Copperplate"; 
+    font-size: 40px; 
+    text-shadow: 2px 2px black;
+}
+
+.foodTitle a:hover {
+    color: yellow; 
+}
+
+.foodSection {
+    background-color: darkslategrey; 
+}
+
+.ingredientCard {
+
+}
+
+.ingredientTitle {
+    text-align: center; 
+    color: black; 
+}
+
+.recipe {
+    background-color: white; 
+    border: solid; 
+    border-radius: 45px; 
+    border-color: black; 
+    flex-basis: 60%;
+    height: 75vh; 
+}
+
+.recipeTitle {
+    color: #faa22f; 
+    font-family: "Copperplate"; 
+    font-size: 36px; 
+    margin: 25px; 
+    text-decoration: underline;
+}
+
+.musicTitle {
+    background-color: darkslategrey; 
+    color: white; 
+    border: solid; 
+    border-color: black; 
+    border-radius: 15px; 
+    padding: 2px; 
+    margin: 5px; 
+}
+
+.pageWrapper {
+    
+}
+
+.playlistTitle {
+    color: darkslategrey; 
+    font-family: "Copperplate"; 
+    font-size: 36px; 
+    margin: 25px; 
+}
+
+.playlist {
+    flex-basis: 40%; 
+    margin-top: 50px; 
+    text-align: center; 
+
+}
+
+@media (max-width: 800px) {
+    .recipe {
+      height: 100vh;
+    }
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
