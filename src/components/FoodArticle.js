@@ -4,7 +4,6 @@ function FoodArticle({ result }) {
 
     return (
         <div>
-
             <div className="foodImage" style = {{
                 backgroundImage: `url('${result.image}')`, 
                 backgroundPosition: "center", 
@@ -14,11 +13,8 @@ function FoodArticle({ result }) {
                     <a href={`/${result.id}`}> {result.title}</a>
                 </div>
             </div>
-
-            
-
         </div>
     )
 }
-
+ 
 export default FoodArticle

@@ -11,7 +11,7 @@ function useQuery() {
 
 function changeWord(e) {
     e.preventDefault(); 
-    const word = e.currentTarget.word; 
+    // const word = e.currentTarget.word; 
 }
 
 function Home() {
@@ -42,11 +42,9 @@ function Home() {
         } 
     }, [URL_FOOD, food]); 
     
-    const { amount, results = [] } = useMemo(() => {
+    const {results} = useMemo(() => {
         if (!recipeData) return {}; //if recipeData is non existent we return an empty object
-        // console.log(recipeData); 
         return {
-            amount: recipeData.number, 
             results: recipeData.results, 
         }
     }, [])

@@ -9,7 +9,7 @@ const apiKey = `82bf814c573d4bc7a52637bb33010e9d`;
 function FoodMusic(){
 
     let {id} = useParams(); 
-    let numOfGenres = 5; 
+    let numOfGenres = 100; //grab 100 
 
     const [ingredientData, setIngredientData] = useState(); 
     const [musicData, setMusicData] = useState();
@@ -49,10 +49,11 @@ function FoodMusic(){
         } 
     }, [URL_FOOD, id]); 
     
-    const { ingredients } = useMemo(() => {
+    const { ingredients, amount } = useMemo(() => {
         if (!ingredientData) return {};
         return {
             ingredients: ingredientData.ingredients,
+            amount: ingredientData.ingredients.length, 
         }
     }, [])
 
@@ -63,14 +64,17 @@ function FoodMusic(){
         }
     }, [])
 
-    console.log(ingredients, genres); 
+    let minimizedGenre = []; 
+    for (var i=0; i<Math.round(amount/2); i++){
+        minimizedGenre[i] = genres[i]; 
+    }
 
     return (
         <main className="foodDisplay"> 
             <div className="foodContainer">
                 <section className="playlist">
                 <h1 className="playlistTitle"> Genre Recommendations: </h1>
-                    {genres.map((result, key) => (
+                    {minimizedGenre.map((result, key) => (
                             <MusicGenre result={result} key={key}/>
                     ))} 
                 </section>

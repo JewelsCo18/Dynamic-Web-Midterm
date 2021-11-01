@@ -4,7 +4,6 @@ function MusicGenre({ result }) {
 
     return (
         <div>
-
             <div className="musicBackground">
                 <div className="musicTitle">
                     <h1>{result}</h1>

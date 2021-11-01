@@ -1,5 +1,7 @@
 .foodContent {
-    background-color: black; 
+    background-color: darkslategray; 
+    margin: 0 auto; 
+    padding: 0 25px; 
 }
 
 .foodContainer {
@@ -45,9 +47,11 @@
 }
 
 .foodTitle {
+    color: #faa22f; 
     font-family: "Copperplate"; 
     text-align:center; 
     padding-top: 75px; 
+    margin-top: 10px; 
 }
 
 .foodTitle a{
@@ -58,7 +62,7 @@
 }
 
 .foodTitle a:hover {
-    color: yellow; 
+    color: #d3e3b6; 
 }
 
 .foodSection {
@@ -80,7 +84,7 @@
     border-radius: 45px; 
     border-color: black; 
     flex-basis: 60%;
-    height: 75vh; 
+    height: 85vh; 
 }
 
 .recipeTitle {
@@ -114,7 +118,7 @@
 
 .playlist {
     flex-basis: 40%; 
-    margin-top: 50px; 
+    font-size: 14px; 
     text-align: center; 
 
 }
